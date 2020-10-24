@@ -17,7 +17,6 @@ apt-get -y install docker-ce && \
 gpasswd -a jenkins docker && \
 cd /var/run && \
 touch docker.sock && \
-ls -l && \
 
 chown root:docker /var/run/docker.sock
 
