@@ -13,5 +13,9 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable" && \
 apt-get update && \
-apt-get -y install docker-ce
+apt-get -y install docker-ce && \
+gpasswd -a jenkins docker && \
+cd /var/run && \
+chown root:docker docker.sock
+
 USER jenkins
