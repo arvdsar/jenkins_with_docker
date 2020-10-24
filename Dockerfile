@@ -15,6 +15,9 @@ add-apt-repository \
 apt-get update && \
 apt-get -y install docker-ce && \
 gpasswd -a jenkins docker && \
+cd /var/run && \
+ls -l && \
+
 chown root:docker /var/run/docker.sock
 
 USER jenkins
